@@ -18,7 +18,10 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "kr.study.harufriend.c"
+      "package": "kr.study.harufriend.c",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -26,12 +29,33 @@
     "plugins": [
       "expo-router",
       "expo-status-bar",
-      ["expo-camera", { "recordAudioAndroid": false }],
-      ["expo-image-picker", { "microphonePermission": false }]
+      [
+        "expo-camera",
+        {
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "microphonePermission": false
+        }
+      ]
     ],
     "scheme": "harufriend",
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "0afbcac8-aa68-4c0c-a95d-f485f8f2ae63"
+      }
+    },
+    "owner": "jubyeong"
   }
 }
