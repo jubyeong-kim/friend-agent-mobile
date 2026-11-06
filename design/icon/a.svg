@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- 시안 A 「하루」 = 해: 지평선 위로 떠오르는 반원 해의 아랫변에서 말풍선 꼬리가 나온다.
+       배경(A_background)과 전경(A_foreground)은 따로 떼어 쓸 수 있다. 전경은 흰색 한 가지라 단색판도 그대로. -->
+  <defs>
+    <radialGradient id="A_bg" cx="0.5" cy="0.42" r="0.78">
+      <stop offset="0" stop-color="#FF6E71"/>
+      <stop offset="0.5" stop-color="#F7585C"/>
+      <stop offset="1" stop-color="#D93D42"/>
+    </radialGradient>
+  </defs>
+  <g id="A_background">
+    <rect width="1024" height="1024" fill="url(#A_bg)"/>
+  </g>
+  <g id="A_foreground">
+    <g transform="translate(512 606)">
+      <!-- 해(반원) + 말풍선 꼬리: 한 덩어리 -->
+      <path d="M -172 0 A 172 172 0 0 1 172 0 L -22 0 C -38 40 -76 76 -134 94 C -116 64 -110 34 -114 0 Z"
+            fill="#FFFFFF" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round"/>
+      <!-- 빛줄기 다섯 개 (양 끝 둘은 지평선) -->
+      <g stroke="#FFFFFF" stroke-width="52" stroke-linecap="round" fill="none">
+        <line x1="238" y1="0" x2="254" y2="0"/>
+        <line x1="168.3" y1="-168.3" x2="179.6" y2="-179.6"/>
+        <line x1="0" y1="-238" x2="0" y2="-254"/>
+        <line x1="-168.3" y1="-168.3" x2="-179.6" y2="-179.6"/>
+        <line x1="-238" y1="0" x2="-254" y2="0"/>
+      </g>
+    </g>
+  </g>
+</svg>

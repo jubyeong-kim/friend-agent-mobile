@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- 시안 C 굵은 「하」: ㅎ 의 꼭지 = 지평선 위의 해(산호 점), 가로획 = 지평선, ㅇ = 꼬리 달린 말풍선 고리.
+       배경(C_background)과 전경(C_foreground)을 따로 떼어 쓸 수 있다. -->
+  <defs>
+    <linearGradient id="C_bg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#2A3142"/>
+      <stop offset="1" stop-color="#161A23"/>
+    </linearGradient>
+  </defs>
+  <g id="C_background">
+    <rect width="1024" height="1024" fill="url(#C_bg)"/>
+  </g>
+  <g id="C_foreground">
+    <g transform="translate(512 512) scale(0.96) translate(-517 -500)">
+      <!-- ㅎ 꼭지 = 해 -->
+      <circle cx="425" cy="300" r="44" fill="#F7585C"/>
+      <!-- ㅎ 가로획 = 지평선 -->
+      <rect x="290" y="372" width="270" height="62" rx="12" fill="#FFFFFF"/>
+      <!-- ㅇ = 말풍선 고리 -->
+      <path fill="#FFFFFF" fill-rule="evenodd"
+            d="M 425 480 A 120 120 0 1 1 425 720 A 120 120 0 1 1 425 480 Z
+               M 425 540 A 60 60 0 1 0 425 660 A 60 60 0 1 0 425 540 Z"/>
+      <path fill="#FFFFFF" d="M 319 656 Q 326 702 316 734 Q 346 716 372.4 707.9 Z"/>
+      <!-- ㅏ -->
+      <rect x="596" y="282" width="64" height="460" rx="12" fill="#FFFFFF"/>
+      <rect x="640" y="482" width="104" height="62" rx="12" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

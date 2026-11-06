@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- 시안 B 「친구」 = 대화: 해처럼 둥근 말풍선(앞, 산호)과 초승달이 뚫린 네모 말풍선(뒤, 남색)이 겹친다.
+       낮과 밤이 주고받는 대화 = 하루 종일 곁에 있는 친구. 두 말풍선 사이 틈과 초승달은 실제로 뚫려 있어
+       흰 단색판으로도 성립한다. 배경(B_background)과 전경(B_foreground)은 따로 떼어 쓸 수 있다. -->
+  <defs>
+    <linearGradient id="B_bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EFF0F3"/>
+    </linearGradient>
+    <linearGradient id="B_coral" gradientUnits="userSpaceOnUse" x1="60" y1="174" x2="320" y2="548">
+      <stop offset="0" stop-color="#FA6064"/>
+      <stop offset="1" stop-color="#DC4045"/>
+    </linearGradient>
+    <!-- 앞 말풍선(해) 모양: 뒤 말풍선에서 틈을 파낼 때도 같이 씀 -->
+    <g id="B_sun">
+      <circle cx="200" cy="350" r="176"/>
+      <path d="M 44.6 432.6 Q 62 496 66 548 Q 96 524 122.8 508.2 Z"/>
+    </g>
+    <mask id="B_backMask" maskUnits="userSpaceOnUse" x="-300" y="-300" width="1200" height="1200">
+      <rect x="-300" y="-300" width="1200" height="1200" fill="#FFFFFF"/>
+      <use href="#B_sun" fill="#000000" stroke="#000000" stroke-width="56" stroke-linejoin="round"/>
+      <!-- 초승달: 큰 원을 뚫고 비껴 놓은 원으로 다시 채운다 -->
+      <circle cx="438" cy="146" r="64" fill="#000000"/>
+      <circle cx="468" cy="122" r="56" fill="#FFFFFF"/>
+    </mask>
+  </defs>
+  <g id="B_background">
+    <rect width="1024" height="1024" fill="url(#B_bg)"/>
+  </g>
+  <g id="B_foreground">
+    <g transform="translate(512 512) scale(0.86) translate(-296 -286)">
+      <!-- 뒤 말풍선: 밤 (남색, 초승달, 꼬리 오른쪽 아래) -->
+      <g mask="url(#B_backMask)" fill="#1F2430">
+        <rect x="196" y="20" width="352" height="330" rx="88"/>
+        <path d="M 380 330 C 430 384 504 402 566 410 C 540 380 530 344 528 290 Z"/>
+      </g>
+      <!-- 앞 말풍선: 해 (산호, 꼬리 왼쪽 아래) -->
+      <use href="#B_sun" fill="url(#B_coral)"/>
+    </g>
+  </g>
+</svg>

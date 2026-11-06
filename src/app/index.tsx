@@ -57,7 +57,7 @@ function notesFrom(event: ChatEvent): string[] {
 
 export default function ChatScreen() {
   const session = useSession();
-  if (session.status === 'loading') return <Loading />;
+  if (session.status === 'loading') return <Loading brand />;
   if (session.status === 'error') return <ErrorView message={session.message} retry={session.retry} />;
   if (!session.me.has_character) return <Redirect href="/character" />;
   return <Chat ocrEnabled={session.config.ocr_enabled === true} />;
