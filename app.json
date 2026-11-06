@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "하루친구",
+    "name": "하루친구 (C)",
     "slug": "friend-agent-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.example.harufriend"
+      "bundleIdentifier": "kr.study.harufriend.c"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,14 +18,16 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.example.harufriend"
+      "package": "kr.study.harufriend.c"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router",
-      "expo-status-bar"
+      "expo-status-bar",
+      ["expo-camera", { "recordAudioAndroid": false }],
+      ["expo-image-picker", { "microphonePermission": false }]
     ],
     "scheme": "harufriend",
     "experiments": {
